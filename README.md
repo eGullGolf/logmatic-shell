@@ -6,6 +6,26 @@ Shell Client for Logmatic API
 This software uses [cUrl](https://curl.haxx.se/) utility to issue requests.
 It is commonly found already installed on Unix systems.
 
+# Configuration
+
+The configuration is read from the following locations,
+in given order:
+
+* `config.sh` - default parameters
+  (part of this git project)
+* `/etc/logmatic-shell/config.sh` - custom parameters
+  (shared location outside project)
+* `config.my.sh` - custom parameters
+  (local file, ignored by git)
+
+Properties defined in configuration files loaded after supersede
+properties defined in configuration files loaded before.
+
+The default `config.sh` gives an empty value to the private API key,
+which prevents requests, to make sure that a custom key is configured.
+A value must be set to the `logmaticSecretKey` property in one of the
+custom configuration files.
+
 ## License
 
 Copyright 2017 eGull SAS  
