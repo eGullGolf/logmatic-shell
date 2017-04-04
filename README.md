@@ -24,7 +24,8 @@ properties defined in configuration files loaded before.
 The default `config.sh` gives an empty value to the private API key,
 which prevents requests, to make sure that a custom key is configured.
 A value must be set to the `logmaticSecretKey` property in one of the
-custom configuration files.
+custom configuration files. You can find API Keys in the
+Configuration > API keys section of your Logmatic dashboard.
 
 ## License
 
